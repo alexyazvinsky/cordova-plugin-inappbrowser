@@ -1048,14 +1048,14 @@ public class InAppBrowser extends CordovaPlugin {
                 lp.height = WindowManager.LayoutParams.MATCH_PARENT;
 
                 dialog.setContentView(main);
-                if(dialog){
+                if(dialog != null){
                     dialog.show();
                 }
                 dialog.getWindow().setAttributes(lp);
                 // the goal of openhidden is to load the url and not display it
                 // Show() needs to be called to cause the URL to be loaded
                 if(openWindowHidden) {
-                    if(dialog){
+                    if(dialog != null){
                         dialog.hide();
                     }
                 }
